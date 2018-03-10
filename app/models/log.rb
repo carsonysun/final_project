@@ -5,4 +5,6 @@ class Log < ApplicationRecord
 
   # Validations
 
+  validates :time_of_day, :presence => { :message => "When did you work on this habit today?" }
+
 end
