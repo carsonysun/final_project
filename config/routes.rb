@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "categories#index"
   # Routes for the Habit resource:
   # CREATE
   get "/habits/new", :controller => "habits", :action => "new"
