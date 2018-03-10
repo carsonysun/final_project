@@ -50,8 +50,6 @@ class HabitsController < ApplicationController
 
   def update
     @habit = Habit.find(params[:id])
-
-    @habit.user_id = params[:user_id]
     @habit.name = params[:name]
     @habit.motivation = params[:motivation]
     @habit.category_id = params[:category_id]
