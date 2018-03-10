@@ -1,6 +1,9 @@
 class Habit < ApplicationRecord
   # Direct associations
 
+  has_many   :logs,
+             :dependent => :destroy
+
   belongs_to :category
 
   belongs_to :user
