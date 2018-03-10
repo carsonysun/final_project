@@ -1,4 +1,6 @@
 ActiveAdmin.register Log do
+
+ permit_params :habit_id, :date, :time_of_day, :rating_of_the_day
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
