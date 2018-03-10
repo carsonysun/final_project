@@ -6,7 +6,13 @@
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
       <dt>Habit</dt>
-      <dd><%= @log.habit_id %></dd>
+      <dd>
+        <% if @log.habit.present? %>
+          <a href="/habits/<%= @log.habit_id %>">
+            <%= @log.habit.user_id %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Date</dt>
       <dd><%= @log.date %></dd>

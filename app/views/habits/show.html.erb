@@ -6,7 +6,13 @@
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
       <dt>User</dt>
-      <dd><%= @habit.user_id %></dd>
+      <dd>
+        <% if @habit.user.present? %>
+          <a href="/users/<%= @habit.user_id %>">
+            <%= @habit.user.email %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Name</dt>
       <dd><%= @habit.name %></dd>
@@ -15,7 +21,13 @@
       <dd><%= @habit.motivation %></dd>
 
       <dt>Category</dt>
-      <dd><%= @habit.category_id %></dd>
+      <dd>
+        <% if @habit.category.present? %>
+          <a href="/categories/<%= @habit.category_id %>">
+            <%= @habit.category.name %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Days per week</dt>
       <dd><%= @habit.days_per_week %></dd>
