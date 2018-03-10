@@ -18,7 +18,7 @@
 
       <% @logs.each do |log| %>
       <tr>
-        <td><%= log.habit_id %></td>
+        <td><%= log.habit.user_id %></td>
         <td><%= log.date %></td>
         <td><%= log.time_of_day %></td>
         <td><%= log.rating_of_the_day %></td>
