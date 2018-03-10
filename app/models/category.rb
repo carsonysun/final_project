@@ -5,4 +5,6 @@ class Category < ApplicationRecord
 
   # Validations
 
+  validates :name, :length => { :minimum => 1, :maximum => 25 }
+
 end
