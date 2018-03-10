@@ -6,6 +6,10 @@ class Category < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :users,
+             :through => :habits,
+             :source => :user
+
   # Validations
 
   validates :name, :uniqueness => { :message => "This category already exists!" }

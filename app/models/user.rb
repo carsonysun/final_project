@@ -6,6 +6,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :categories,
+             :through => :habits,
+             :source => :category
+
   # Validations
 
   validates :username, :uniqueness => { :message => "This username has already been taken!" }
